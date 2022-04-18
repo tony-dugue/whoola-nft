@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Logo from "./Logo";
+import Button from "./Button";
 
 const Navigation = () => {
   return (
@@ -19,7 +20,7 @@ const Navigation = () => {
          <MenuItem>Faq</MenuItem>
        </Menu>
 
-       <h2>Button</h2>
+       <Button text="Wallet Connect" link="https://google.com"/>
 
      </NavBar>
    </NavigationWrapper>
