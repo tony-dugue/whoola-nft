@@ -7,9 +7,20 @@ const Navigation = () => {
   return (
    <NavigationWrapper>
      <NavBar>
+
        <Logo />
-       <h2>Menu</h2>
+
+       <Menu>
+         <MenuItem>Accueil</MenuItem>
+         <MenuItem>A propos</MenuItem>
+         <MenuItem>Roadmap</MenuItem>
+         <MenuItem>Showcase</MenuItem>
+         <MenuItem>Team</MenuItem>
+         <MenuItem>Faq</MenuItem>
+       </Menu>
+
        <h2>Button</h2>
+
      </NavBar>
    </NavigationWrapper>
   )
@@ -31,3 +42,33 @@ const NavBar = styled.nav`
   height: ${props => props.theme.navHeight};
   margin: 0 auto;
 `
+
+const Menu = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+`
+
+const MenuItem = styled.li`
+  margin: 0 1rem;
+  color: ${props => props.theme.text};
+  cursor: pointer;
+  
+  &::after {
+    content: ' ';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: ${props => props.theme.text};
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    color: ${props => props.theme.primary};
+    
+    &::after {
+      width: 100%;
+    }
+  }
+`
+
