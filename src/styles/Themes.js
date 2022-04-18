@@ -3,6 +3,8 @@
 export const light = {
   primary: '#0396A6',
   secondary: '#F2AD1D',
+  ternary: '#A6200C',
+  quaternary: '#A6740C',
 
   body: '#fff',
   text: '#202020',
@@ -27,6 +29,8 @@ export const light = {
 export const dark = {
   primary: '#0396A6',
   secondary: '#F2AD1D',
+  ternary: '#A6200C',
+  quaternary: '#A6740C',
 
   body: '#202020',
   text: '#fff',

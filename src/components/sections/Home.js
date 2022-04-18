@@ -1,16 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
+import TypeWriterText from "../TypeWriterText";
 
 const Home = () => {
   return (
-   <Wrapper>
-    Home
-   </Wrapper>
+   <HomeWrapper>
+     <Container>
+       <Box><TypeWriterText /></Box>
+       <Box><h1>Video</h1></Box>
+     </Container>
+   </HomeWrapper>
   )
 }
 
 export default Home
 
-const Wrapper = styled.div`
-
+const HomeWrapper = styled.section`
+  min-height: ${props => `calc(100vh - ${props.theme.navHeight})`};
+  width: 100%;
+  position: relative;
+  background-color: ${props => props.theme.body};
 `
+
+const Container = styled.div`
+  width: 75%;
+  min-height: 80vh;
+  margin: 0 auto;
+  background-color: lightblue;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const Box = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
