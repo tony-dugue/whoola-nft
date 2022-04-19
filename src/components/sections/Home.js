@@ -1,15 +1,27 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+
 import TypeWriterText from "../TypeWriterText";
 import CoverVideo from "../CoverVideo";
+import RoundTextBlack from '../../assets/Rounded-Text-Black.png'
+import {Link} from "react-router-dom";
 
 const Home = () => {
   return (
    <HomeWrapper>
+
      <Container>
        <Box><TypeWriterText /></Box>
        <Box><CoverVideo /></Box>
      </Container>
+
+     <Link to="#showcase">
+       <Round>
+         <Circle>&#x2193;</Circle>
+         <img src={RoundTextBlack} alt="NFT" />
+       </Round>
+     </Link>
+
    </HomeWrapper>
   )
 }
@@ -41,5 +53,45 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`
+
+const rotate = keyframes`
+  100% {
+    transform: rotate(1turn);
+  }
+`
+
+const Round = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  right: 90%;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid ${props => props.theme.text};
+  border-radius: 50%;
+  
+  img {
+    width: 100%;
+    height: auto;
+    animation: ${rotate} 6s linear infinite reverse;
+  }
+`
+
+const Circle = styled.span`
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: ${props => props.theme.text};
+  color: ${props => props.theme.body};
+  font-size: 1.5rem;
 `
 
