@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Carousel from "../Carousel";
+
 const About = () => {
   return (
    <AboutWrapper>
      <Container>
-       <Box>Carousel</Box>
+       <Box><Carousel /></Box>
        <Box>Text</Box>
      </Container>
    </AboutWrapper>
@@ -18,7 +20,6 @@ const AboutWrapper = styled.section`
   min-height: 100vh;
   width: 100%;
   background-color: ${props => props.theme.primary};
-  color: ${props => props.theme.body};
 
   display: flex;
   justify-content: center;

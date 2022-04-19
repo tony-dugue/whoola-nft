@@ -64,8 +64,11 @@ https://fontsource.org/ <br />
 
 [normalize.css](https://necolas.github.io/normalize.css/) <br />
 [styled-components](https://styled-components.com/docs/advanced) <br />
-[GSAP](https://greensock.com/gsap/) <br />
+typewriter effects (section home) : 
 [typewritter-effect](https://www.npmjs.com/package/typewriter-effect) <br />
+Carousel avec cartes (section à propos) : 
+[SwiperJS](https://swiperjs.com/demos#effect-cards) <br />
+[GSAP](https://greensock.com/gsap/) <br />
 [react-confetti](https://www.npmjs.com/package/react-confetti) <br />
 [react-use](https://www.npmjs.com/package/react-use) <br />
 
