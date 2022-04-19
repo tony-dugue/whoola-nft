@@ -39,7 +39,6 @@ const Container = styled.div`
   width: 75%;
   min-height: 80vh;
   margin: 0 auto;
-  //background-color: lightblue;
   
   display: flex;
   justify-content: center;
