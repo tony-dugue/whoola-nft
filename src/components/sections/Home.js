@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import TypeWriterText from "../TypeWriterText";
+import CoverVideo from "../CoverVideo";
 
 const Home = () => {
   return (
    <HomeWrapper>
      <Container>
        <Box><TypeWriterText /></Box>
-       <Box><h1>Video</h1></Box>
+       <Box><CoverVideo /></Box>
      </Container>
    </HomeWrapper>
   )
@@ -26,7 +27,7 @@ const Container = styled.div`
   width: 75%;
   min-height: 80vh;
   margin: 0 auto;
-  background-color: lightblue;
+  //background-color: lightblue;
   
   display: flex;
   justify-content: center;

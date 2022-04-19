@@ -61,6 +61,7 @@ const SubTitle = styled.h3`
   text-transform: capitalize;
   color: ${props => `rgba(${props.theme.textRgba}, 0.6)`};
   font-weight: 600;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   width: 80%;
   align-self: flex-start;
