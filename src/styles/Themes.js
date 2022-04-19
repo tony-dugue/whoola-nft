@@ -11,6 +11,7 @@ export const light = {
   bodyRgba: '255, 255, 255',
   textRgba: '32, 32, 32',
 
+  buttonColor: '#0396A6',
   carouselColor: '#EEEDDE',
 
   fontxs: 'O.75em',
@@ -37,6 +38,7 @@ export const dark = {
   bodyRgba: '32, 32, 32',
   textRgba: '255, 255, 255',
 
+  buttonColor: '#fff',
   carouselColor: '#EEEDDE',
 
   fontxs: 'O.75em',

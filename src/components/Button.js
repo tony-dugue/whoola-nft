@@ -13,7 +13,7 @@ export default Button
 
 const Btn = styled.button`
   display: inline-block;
-  background-color: ${props => props.theme.primary};
+  background-color: ${props => props.theme.buttonColor};
   color: ${props => props.theme.body};
   outline: none;
   border: none;
@@ -34,7 +34,7 @@ const Btn = styled.button`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    border: 2px solid ${props => props.theme.primary};
+    border: 2px solid ${props => props.theme.buttonColor};
     width: 100%;
     height: 100%;
     border-radius: 50px;
