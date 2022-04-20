@@ -1,5 +1,5 @@
 import React, {useLayoutEffect, useRef} from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import Vector from "../Icons/Vector";
 
 // gsap
@@ -32,6 +32,13 @@ const DrawSvg = () => {
 
           // also reverse the drawing when scroll goes up
           svg.style.strokeDashoffset = length - draw
+        },
+        onToggle: self => {
+          if (self.isActive) {
+            console.log("Scrolling is active")
+          } else {
+            console.log("Scrolling is not active")
+          }
         }
       }
     })
@@ -41,10 +48,14 @@ const DrawSvg = () => {
   }, [])
 
   return (
-   <VectorContainer ref={ref}>
-     <Vector />
-     {/*<Line />*/}
-   </VectorContainer>
+    <>
+      <Ball />
+
+      <VectorContainer ref={ref}>
+        <Vector />
+        {/*<Line />*/}
+      </VectorContainer>
+    </>
   )
 }
 
@@ -65,3 +76,19 @@ const VectorContainer = styled.div`
   }
 `
 
+const Bounce = keyframes`
+  from { transform: translateX(-50%) scale(0.5) }
+  to { transform: translateX(-50%) scale(1) }
+`
+
+const Ball = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: ${props => props.theme.text};
+  animation: ${Bounce} 0.5s linear infinite alternate;
+`
