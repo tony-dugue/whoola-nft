@@ -10,6 +10,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 const DrawSvg = () => {
 
   const ref = useRef(null)
+  const ballRef = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -35,21 +36,24 @@ const DrawSvg = () => {
         },
         onToggle: self => {
           if (self.isActive) {
-            console.log("Scrolling is active")
+            //console.log("Scrolling is active")
+            ballRef.current.style.display = 'none'
           } else {
-            console.log("Scrolling is not active")
+            //console.log("Scrolling is not active")
+            ballRef.current.style.display = 'inline-block'
           }
         }
       }
     })
 
     return () => {
+      if(tl) tl.kill()
     }
   }, [])
 
   return (
     <>
-      <Ball />
+      <Ball ref={ballRef} />
 
       <VectorContainer ref={ref}>
         <Vector />
