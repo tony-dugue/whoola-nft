@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const RoadmapItem = ({ title, subtext }) => {
+const RoadmapItem = ({ title, subtext, addToRef }) => {
   return (
-    <Item>
+    <Item ref={addToRef}>
       <ItemContainer>
         <Box>
           <Title>{title}</Title>
