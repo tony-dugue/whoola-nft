@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import DrawSvg from "../DrawSvg";
+import RoadmapItem from "../RoadmapItem";
 
 const Roadmap = () => {
   return (
@@ -9,9 +11,21 @@ const Roadmap = () => {
     <Title>Roadmap</Title>
 
      <Container>
+
       <SvgContainer>
         <DrawSvg />
       </SvgContainer>
+
+       <Items>
+         <Item>&nbsp;</Item>
+         <RoadmapItem title="Créez" subtext="Bro ipsum dolor sit amet bear trap frontside grab sucker hole chillax japan air dirtbag skinny frozen chicken heads dust on crust." />
+         <RoadmapItem title="Vendez" subtext="Bro ipsum dolor sit amet death cookies rock-ectomy crunchy scream clean avie spread eagle, skid schwag taco." />
+         <RoadmapItem title="Ajoutez" subtext="Groomer single track park death cookies grind, berm taco mitt booter wack tele avie death cookies pipe backside." />
+         <RoadmapItem title="Listez" subtext="Wheels park line cornice clean carbon backside Bike." />
+         <RoadmapItem title="Configurez" subtext="BB free ride acro gear jammer trail swag dirt berm slash Ski." />
+         <RoadmapItem title="Téléchargez" subtext="Noodle 180 trucks reverse camber berm ripper huck chain suck piste. Switch bunny slope derailleur heli hot dogging liftie." />
+       </Items>
+
      </Container>
 
    </Wrapper>
@@ -54,4 +68,43 @@ const SvgContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+const Items = styled.ul`
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &>*:nth-of-type(2n+1) {
+    justify-content: start;
+
+    div {
+      border-radius: 0 50px 0 50px;
+      text-align: right;
+    }
+    p {
+      border-radius: 0 40px 0 40px;
+    }
+  }
+  &>*:nth-of-type(2n) {
+    justify-content: end;
+
+    div {
+      border-radius: 50px 0 50px 0;
+      text-align: left;
+    }
+    p {
+      border-radius: 40px 0 40px 0;
+    }
+  }
+`
+
+const Item = styled.li`
+  width: 100%;
+  height: 100%;
+  display: flex;
 `
