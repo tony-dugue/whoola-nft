@@ -2,7 +2,7 @@ import * as React from "react"
 
 const SvgComponent = (props) => (
   <svg
-    viewBox="0 0 662 1372"
+    viewBox="0 0 420 1600"
     fill={props.fill || "none"}
     {...props}
   >

@@ -1,11 +1,12 @@
 import React, {useLayoutEffect, useRef} from 'react'
 import styled, {keyframes} from 'styled-components'
-import Vector from "../Icons/Vector";
+
+//import Vector from "../Icons/Vector";
+import Line from "../Icons/Line";
 
 // gsap
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-//import Line from "../Icons/Line";
 
 const DrawSvg = () => {
 
@@ -56,8 +57,8 @@ const DrawSvg = () => {
       <Ball ref={ballRef} />
 
       <VectorContainer ref={ref}>
-        <Vector />
-        {/*<Line />*/}
+        {/*<Vector />*/}
+        <Line />
       </VectorContainer>
     </>
   )
