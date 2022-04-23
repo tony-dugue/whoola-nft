@@ -21,6 +21,8 @@ const ItemContainer = styled.div`
   color: ${props => props.theme.body};
   margin: 2rem 1rem;
   position: relative;
+  z-index: 5;
+  backdrop-filter: blur(4px);
   border: 2px solid ${props => props.theme.text};
   border-radius: 20px;
   
