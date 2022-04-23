@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import styled, {keyframes} from 'styled-components'
 
 import ShowcaseNftItem from "../ShowcaseNftItem";
@@ -15,22 +15,26 @@ import img9 from '../../assets/Nfts/bighead-8.svg'
 import img10 from '../../assets/Nfts/bighead-9.svg'
 
 const Showcase = () => {
+
+  const Row1Ref = useRef(null)
+  const Row2Ref = useRef(null)
+
   return (
    <Wrapper>
-     <Row direction="none">
-       <ShowcaseNftItem img={img1} number={852} price={1} />
-       <ShowcaseNftItem img={img2} number={123} price={1.2} />
-       <ShowcaseNftItem img={img3} number={456} price={2.5} />
-       <ShowcaseNftItem img={img4} number={666} price={3.5} />
-       <ShowcaseNftItem img={img5} number={452} price={4.7} />
+     <Row direction="none" ref={Row1Ref}>
+       <ShowcaseNftItem img={img1} number={852} price={1} passRef={Row1Ref} />
+       <ShowcaseNftItem img={img2} number={123} price={1.2} passRef={Row1Ref} />
+       <ShowcaseNftItem img={img3} number={456} price={2.5} passRef={Row1Ref} />
+       <ShowcaseNftItem img={img4} number={666} price={3.5} passRef={Row1Ref} />
+       <ShowcaseNftItem img={img5} number={452} price={4.7} passRef={Row1Ref} />
      </Row>
 
-     <Row direction="reverse">
-       <ShowcaseNftItem img={img6} number={888} price={1.2} />
-       <ShowcaseNftItem img={img7} number={211} price={3.2} />
-       <ShowcaseNftItem img={img8} number={455} price={1.8} />
-       <ShowcaseNftItem img={img9} number={456} price={5.1} />
-       <ShowcaseNftItem img={img10} number={865} price={3.7} />
+     <Row direction="reverse" ref={Row2Ref}>
+       <ShowcaseNftItem img={img6} number={888} price={1.2} passRef={Row2Ref} />
+       <ShowcaseNftItem img={img7} number={211} price={3.2} passRef={Row2Ref} />
+       <ShowcaseNftItem img={img8} number={455} price={1.8} passRef={Row2Ref} />
+       <ShowcaseNftItem img={img9} number={456} price={5.1} passRef={Row2Ref} />
+       <ShowcaseNftItem img={img10} number={865} price={3.7} passRef={Row2Ref} />
      </Row>
    </Wrapper>
   )
@@ -47,6 +51,13 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+  
+  &>*:first-child {
+    animation-duration: 20s;
+  }
+  &>*:last-child {
+    animation-duration: 15s;
+  }
 `
 
 const move = keyframes`

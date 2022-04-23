@@ -3,9 +3,18 @@ import styled from 'styled-components'
 
 import ETH from '../assets/icons8-ethereum-48.png'
 
-const ShowcaseNftItem = ({ img, number = 0, price = 0 }) => {
+const ShowcaseNftItem = ({ img, number = 0, price = 0, passRef }) => {
+
+  let play = e => {
+    passRef.current.style.animationPlayState = 'running'
+  }
+
+  let pause = e => {
+    passRef.current.style.animationPlayState = 'paused'
+  }
+
   return (
-   <ImgContainer>
+   <ImgContainer onMouseOver={ e => pause(e)} onMouseOut={ e => play(e)}>
 
     <img src={img} alt="The Whoolas" />
 
