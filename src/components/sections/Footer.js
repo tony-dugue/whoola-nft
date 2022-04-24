@@ -40,6 +40,11 @@ const Footer = () => {
 
      </Container>
 
+     <Bottom>
+       <span>&copy; {new Date().getFullYear()} Whoola Club. Tous droits réservés</span>
+       <span>Made with &#10084;</span>
+     </Bottom>
+
    </Wrapper>
   )
 }
@@ -118,4 +123,12 @@ const Item = styled.li`
       width: 100%;
     }
   }
+`
+
+const Bottom = styled.div`
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
