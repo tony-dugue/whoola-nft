@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import Banner from "../Banner";
 
 const Footer = () => {
   return (
    <Wrapper>
-    Footer
+     <Banner />
    </Wrapper>
   )
 }
@@ -18,7 +19,7 @@ const Wrapper = styled.section`
   color: ${props => props.theme.text};
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  //justify-content: center;
+  //align-items: center;
   flex-direction: column;
 `

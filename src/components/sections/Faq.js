@@ -16,14 +16,20 @@ const Faq = () => {
 
     let element = ref.current
 
-    ScrollTrigger.create({
+    const tl = ScrollTrigger.create({
       trigger: element,
       start: 'top top',
       end: 'bottom top',
       pin: true,
       pinSpacing: false,
-      scrub: true
+      scrub: true,
+      //markers: true
     })
+
+    return () => {
+      tl.kill()
+    }
+
   }, [])
 
   return (
