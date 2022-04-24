@@ -5,6 +5,18 @@ import Logo from "./Logo";
 import Button from "./Button";
 
 const Navigation = () => {
+
+  const scrollTo = id => {
+
+    let element = document.getElementById(id)
+
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
+
   return (
    <NavigationWrapper>
      <NavBar>
@@ -12,12 +24,12 @@ const Navigation = () => {
        <Logo />
 
        <Menu>
-         <MenuItem>Accueil</MenuItem>
-         <MenuItem>A propos</MenuItem>
-         <MenuItem>Roadmap</MenuItem>
-         <MenuItem>Showcase</MenuItem>
-         <MenuItem>Team</MenuItem>
-         <MenuItem>Faq</MenuItem>
+         <MenuItem onClick={ () => scrollTo('home')}>Accueil</MenuItem>
+         <MenuItem onClick={ () => scrollTo('about')}>A propos</MenuItem>
+         <MenuItem onClick={ () => scrollTo('roadmap')}>Roadmap</MenuItem>
+         <MenuItem onClick={ () => scrollTo('showcase')}>Showcase</MenuItem>
+         <MenuItem onClick={ () => scrollTo('team')}>Team</MenuItem>
+         <MenuItem onClick={ () => scrollTo('faq')}>Faq</MenuItem>
        </Menu>
 
        <Button text="Wallet Connect" link="https://google.com"/>

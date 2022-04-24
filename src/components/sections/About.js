@@ -8,7 +8,7 @@ import { dark } from "../../styles/Themes"
 
 const About = () => {
   return (
-   <AboutWrapper>
+   <AboutWrapper id="about">
      <Container>
 
        <Box><Carousel /></Box>

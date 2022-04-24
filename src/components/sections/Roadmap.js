@@ -45,7 +45,7 @@ const Roadmap = () => {
   }, [])
 
   return (
-   <Wrapper>
+   <RoadmapWrapper id="roadmap">
 
     <Title>Roadmap</Title>
 
@@ -67,13 +67,13 @@ const Roadmap = () => {
 
      </Container>
 
-   </Wrapper>
+   </RoadmapWrapper>
   )
 }
 
 export default Roadmap
 
-const Wrapper = styled.section`
+const RoadmapWrapper = styled.section`
   min-height: 100vh;
   width: 100%;
   background-color: ${props => props.theme.body};

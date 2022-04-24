@@ -16,7 +16,7 @@ import ConfettiAnimation from "../ConfettiAnimation";
 
 const Team = () => {
   return (
-   <Wrapper>
+   <TeamWrapper id="team">
 
      <ConfettiAnimation />
 
@@ -34,13 +34,13 @@ const Team = () => {
        <TeamMemberItem img={img9} name="BANANA" position="Graphiste / Designer" />
      </Container>
 
-   </Wrapper>
+   </TeamWrapper>
   )
 }
 
 export default Team
 
-const Wrapper = styled.section`
+const TeamWrapper = styled.section`
   min-height: 100vh;
   width: 100%;
   background-color: ${props => props.theme.body};

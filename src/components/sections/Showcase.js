@@ -20,7 +20,7 @@ const Showcase = () => {
   const Row2Ref = useRef(null)
 
   return (
-   <Wrapper>
+   <ShowcaseWrapper id="showcase">
      <Row direction="none" ref={Row1Ref}>
        <ShowcaseNftItem img={img1} number={852} price={1} passRef={Row1Ref} />
        <ShowcaseNftItem img={img2} number={123} price={1.2} passRef={Row1Ref} />
@@ -36,13 +36,13 @@ const Showcase = () => {
        <ShowcaseNftItem img={img9} number={456} price={5.1} passRef={Row2Ref} />
        <ShowcaseNftItem img={img10} number={865} price={3.7} passRef={Row2Ref} />
      </Row>
-   </Wrapper>
+   </ShowcaseWrapper>
   )
 }
 
 export default Showcase
 
-const Wrapper = styled.section`
+const ShowcaseWrapper = styled.section`
   min-height: 100vh;
   width: 100%;
   background-color: ${props => props.theme.text};

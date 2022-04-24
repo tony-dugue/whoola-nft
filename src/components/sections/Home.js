@@ -4,23 +4,32 @@ import styled, {keyframes} from 'styled-components'
 import TypeWriterText from "../TypeWriterText";
 import CoverVideo from "../CoverVideo";
 import RoundTextBlack from '../../assets/Rounded-Text-Black.png'
-import {Link} from "react-router-dom";
 
 const Home = () => {
+
+  const scrollTo = id => {
+
+    let element = document.getElementById(id)
+
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
+
   return (
-   <HomeWrapper>
+   <HomeWrapper id="home">
 
      <Container>
        <Box><TypeWriterText /></Box>
        <Box><CoverVideo /></Box>
      </Container>
 
-     <Link to="#showcase">
-       <Round>
-         <Circle>&#x2193;</Circle>
-         <img src={RoundTextBlack} alt="NFT" />
-       </Round>
-     </Link>
+     <Round onClick={ () => scrollTo('showcase')}>
+       <Circle>&#x2193;</Circle>
+       <img src={RoundTextBlack} alt="NFT" />
+     </Round>
 
    </HomeWrapper>
   )

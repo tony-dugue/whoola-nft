@@ -33,7 +33,7 @@ const Faq = () => {
   }, [])
 
   return (
-   <Wrapper ref={ref}>
+   <FaqWrapper ref={ref} id="faq">
 
     <Title>Faq</Title>
 
@@ -53,13 +53,13 @@ const Faq = () => {
 
      </Container>
 
-   </Wrapper>
+   </FaqWrapper>
   )
 }
 
 export default Faq
 
-const Wrapper = styled.section`
+const FaqWrapper = styled.section`
   min-height: 100vh;
   width: 100%;
   background-color: ${props => props.theme.primary};

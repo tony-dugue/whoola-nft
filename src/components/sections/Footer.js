@@ -9,6 +9,18 @@ import Twitter from "../../Icons/Twitter";
 import LinkedIn from "../../Icons/LinkedIn";
 
 const Footer = () => {
+
+  const scrollTo = id => {
+
+    let element = document.getElementById(id)
+
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
+
   return (
    <Wrapper>
 
@@ -20,22 +32,21 @@ const Footer = () => {
         <Logo />
 
         <IconList>
-          <a href="http://facebook.com" target="_blank" rel="noopener"><Facebook /></a>
-          <a href="http://instagram.com" target="_blank" rel="noopener"><Instagram /></a>
-          <a href="http://twitter.com" target="_blank" rel="noopener"><Twitter /></a>
-          <a href="http://linkedin.com" target="_blank" rel="noopener"><LinkedIn /></a>
+          <a href="http://facebook.com" target="_blank" rel="noreferrer"><Facebook /></a>
+          <a href="http://instagram.com" target="_blank" rel="noreferrer"><Instagram /></a>
+          <a href="http://twitter.com" target="_blank" rel="noreferrer"><Twitter /></a>
+          <a href="http://linkedin.com" target="_blank" rel="noreferrer"><LinkedIn /></a>
         </IconList>
 
       </Left>
 
       <MenuItems>
-        <Item>Accueil</Item>
-        <Item>A propos</Item>
-        <Item>Roadmap</Item>
-
-        <Item>Showcase</Item>
-        <Item>Team</Item>
-        <Item>Faq</Item>
+        <Item onClick={ () => scrollTo('home')}>Accueil</Item>
+        <Item onClick={ () => scrollTo('about')}>A propos</Item>
+        <Item onClick={ () => scrollTo('roadmap')}>Roadmap</Item>
+        <Item onClick={ () => scrollTo('showcase')}>Showcase</Item>
+        <Item onClick={ () => scrollTo('team')}>Team</Item>
+        <Item onClick={ () => scrollTo('faq')}>Faq</Item>
       </MenuItems>
 
      </Container>
