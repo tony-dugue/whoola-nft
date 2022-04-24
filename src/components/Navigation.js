@@ -18,7 +18,7 @@ const Navigation = () => {
   }
 
   return (
-   <NavigationWrapper>
+   <NavigationWrapper id="navigation">
      <NavBar>
 
        <Logo />
