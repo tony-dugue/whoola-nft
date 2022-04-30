@@ -31,6 +31,10 @@ const ItemContainer = styled.div`
       transform: translateY(-1rem) scale(1.1);
     }
   }
+
+  @media (max-width: 64em) {
+    width: 70vw;
+  }
 `
 
 const ImgContainer = styled.div`

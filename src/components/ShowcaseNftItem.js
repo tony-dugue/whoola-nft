@@ -47,6 +47,13 @@ const ImgContainer = styled.div`
   border-radius: 20px;
   cursor: pointer;
   
+  @media (max-width: 48em) {
+    width: 12rem;
+  }
+  @media (max-width: 30em) {
+    width: 10rem;
+  }
+  
   img {
     width: 100%;
     height: auto;
@@ -74,6 +81,10 @@ const Details = styled.div`
     font-size: ${props => props.theme.fontmd};
     color: ${props => props.theme.body};
     font-weight: 600;
+
+    @media (max-width: 48em) {
+      font-size: ${props => props.theme.fontsm};
+    }
   }
 `
 

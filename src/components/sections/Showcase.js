@@ -54,9 +54,17 @@ const ShowcaseWrapper = styled.section`
   
   &>*:first-child {
     animation-duration: 20s;
+
+    @media (max-width: 30em) {
+      animation-duration: 15s;
+    }
   }
   &>*:last-child {
     animation-duration: 15s;
+
+    @media (max-width: 30em) {
+      animation-duration: 10s;
+    }
   }
 `
 
