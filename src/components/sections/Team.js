@@ -45,6 +45,7 @@ const TeamWrapper = styled.section`
   width: 100%;
   background-color: ${props => props.theme.body};
   position: relative;
+  overflow: hidden;
 `
 
 const Title = styled.h1`
