@@ -104,6 +104,7 @@ const Menu = styled.ul`
     background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.85)`};
     backdrop-filter: blur(2px);
     
+    opacity: ${props => props.click ? 1 : 0};
     transform: ${props => props.click ? 'translateY(0)' : 'translateY(100%)'};
     transition: all 0.3s ease;
     
